@@ -1,0 +1,161 @@
+/*=============================全体===================================*/
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;  /*リンクを作ると勝手に下線が引かれてしまうので、無くしている*/
+}
+
+.container {  /*全てのcontainerに対応させている*/
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto; /*余った横幅は自動で調整*/
+}
+
+
+/*========================header====================================*/
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);  /*透明度まで決定　この場合は１割透過*/
+  position: fixed;  /*画面上で場所を固定*/
+  top: 0; /*一番上に固定*/
+  z-index: 10;  /*他のものと重なった場合、上に表示する（数が大きいほど上に表示）*/
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left { float: left; }
+
+.header-right {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s; /*0.5秒をかけて下のhoverがゆっくり変わる*/
+}
+
+.header-right:hover {
+  background-color: rgba(255, 255, 255, 0.5); /*元と比べて色を濃くする*/
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block; /*display方式に変更*/
+}
+
+/*=============================top=====================================*/
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(https://prog-8.com/images/html/advanced/top.png); /*背景画像はcssにて指定*/
+  background-size: cover; /*背景は横幅全てに適用されるようにする*/
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7; /*文字の不透明度*/
+  font-size: 45px;
+  letter-spacing: 5px;  /*字間を決定*/
+}
+
+.top-wrapper p { opacity: 0.7; }
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;  /*これをすることによりボタンが横並びになる*/
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover { opacity: 1; }
+
+.btn-wrapper { margin: 20px 0; }
+
+.btn-wrapper p { margin: 10px 0; }
+
+.signup { background-color: #239b76; }
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter { background-color: #55acee; }
+
+.fab { margin-right: 5px; }
+
+/*==================================lesson===============================*/
+.lesson-wrapper {
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: #5f5d60;
+}
+
+.heading h2 { font-weight: normal; }  /*hで始めた分は全てフォントが重くなってしまうので、普通にしている*/
+
+.lesson {
+  float: left;
+  width: 25%;/*幅を４等分にしている*/
+}
+
+.lesson-icon { position: relative; }  /*各レッスンアイコンの位置を下のpの基準にしている*/
+
+.lesson-icon p {
+  position: absolute; /*基準位置から一定の位置に固定*/
+  top: 80px;  /*上から80px（今回は上下の位置のみ設定）*/
+  width: 100%;  /*幅は100%にすることで真ん中に配置できる*/
+  color: white;
+}
+
+.txt-contents {
+  width: 80%; /*100%にすると目いっぱいになってしまうので、80%に調整*/
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #b3aeb5;
+}
+
+.heading h3 { font-weight: normal; }
+
+.message-wrapper {
+  border-bottom: 1px solid #eee;  /*下の部分に薄い線を入れた*/
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;  /*カーソルが合った時、指に変える*/
+  box-shadow: 0 7px #1a7940;  /*下側に影を設定*/
+}
+
+.message:active { /*アクティブになったときの設定*/
+  position: relative; /*自身を基準にして*/
+  top: 7px; /*7px下げる*/
+  box-shadow: none; /*影は無くす*/
+}
+
+/*===========================footer==============================*/
+footer img { width: 125px; }
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer { padding-top: 30px; }
